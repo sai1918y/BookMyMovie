@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AdminRepository extends JpaRepository<Admin,String> {
+    public interface AdminRepository extends JpaRepository<Admin,String> {
     @Query("SELECT COUNT(a) > 0 FROM Admin a WHERE a.username = :username AND a.password = :password")
     boolean verify(@Param("username") String username, @Param("password") String password) ;
 }
