@@ -3,7 +3,6 @@ import com.example.BookMyMovie.table.Seatbooking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-
 public interface SeatbookingRepository extends JpaRepository<Seatbooking, Integer> {
 
     List<Seatbooking> findByMovieId(int movieId);
